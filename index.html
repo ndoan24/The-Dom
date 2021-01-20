@@ -1,0 +1,63 @@
+
+<form name="contactForm" id="form" onsubmit="return validateForm()" action="" method="get">
+    <h2>Application Form</h2>
+    <div class="row">
+        <label>Full Name</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+
+
+<form action="/action_page.php">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+    <input type="submit">
+  </form>
+
+    <div class="row">
+        <label>Mobile Number</label>
+        <input type="text" name="mobile">
+        <div class="error" id="mobileErr"></div>
+    </div>
+
+
+    <form action="/action_page.php">
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd"
+  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+  <input type="submit">
+</form>
+   
+    <div class="row">
+        <label>Country</label>
+        <select name="country">
+            <option>Select</option>
+            <option>Canada</option>
+            <option>Mexico</option>
+            <option>United States</option>
+            <option>Greenland</option>
+        </select> 
+        <div class="error" id="countryErr"></div>
+    </div>
+    <div class="row">
+        <label>Gender</label>
+        <div class="form-inline">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label> 
+        </div>
+        <div class="error" id="genderErr"></div>
+    </div>
+    <div class="row">
+        <label>Hobbies <i>(Optional)</i></label>
+        <div class="form-inline">
+            <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+            <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>  
+        </div>
+    </div>        
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</form>
